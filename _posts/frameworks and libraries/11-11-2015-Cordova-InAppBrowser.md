@@ -23,26 +23,27 @@ This post is specifically about my usage of the Cordova, InAppBrowser plugin. I 
 
   - Essentially, I want to create list items that the user clicks on, it opens the browser, they view the content (or not) which only then is it loading/streaming, hit the done or close button, and they're right back in the app where they left off.
 
-####Using the Plugin
+###Using the Plugin
 
-Let's assume a few things:
+**Let's assume a few things:**
+
 - You're using Ionic/Angular version 1.x
 - You've installed the InAppBrowserPlugin: `cordova plugin add cordova-plugin-inappbrowser`
 - You've injected `$cordovaInAppBrowser` into your controller as a dependency
 
-Assuming that you've completed the steps above everything else is simple enough. The first thing you'll need to do is to set the options for the InAppBrowser which I reccommend doing as such:
-`var options = {`
+**Assuming that you've completed the steps above everything else is simple enough. The first thing you'll need to do is to set the options for the InAppBrowser which I reccommend doing as such:**
 
-      `location: 'no', // Whether you want to display the url`
-      `clearcache: 'yes',`
-      `toolbar: 'yes', // Must be set to yes in order view the 'done' button`
-      `closebuttoncaption: 'close', // (ios) Must be set but you can choose the caption` 
-      `hardwareback: 'yes' // (Android) Enable the Android back button`
-    `};`
+`var options = {};`
+`options.location: 'no'; // Whether you want to display the url`
+`options.clearcache: 'yes';`
+`options.toolbar: 'yes'; // Must be set to yes in order view the 'done' button`
+`options.closebuttoncaption: 'close'; // (ios) Must be set but you can choose the caption`
+`options.hardwareback: 'yes' // (Android) Enable the Android back button`
 
-The next thing you'll need to do is capture the URL **Note: You'll need to have the `cordova-plugin-whitelist` installed in order to resolve http to https**
+- The next thing you'll need to do is capture the URL **Note: You'll need to have the `cordova-plugin-whitelist` installed in order to resolve http to https**
 I personally like to set the url to a variable and pass it in to make my function call cleaner: `var url = https://www.soundclou.com/[name of the stream]`
-Finally, you'll want to call the the browser open function and pass in the paramenter like so: `$cordovaInAppBrowser.open(url, `_blank`, options)`. 
+
+- Finally, you'll want to call the the browser open function and pass in the paramenter like so: `$cordovaInAppBrowser.open(url, `_blank`, options)`. 
 
 This should allow you open your streaming media without embedding iFrames/widgets, and making API calls, and you'll be able to close the browser with the `done` button and return directly to your app.
 
