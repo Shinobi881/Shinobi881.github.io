@@ -1,39 +1,39 @@
 ---
 layout: post
-title: "GIT STARTED WITH GIT"
+title: "Git Going"
 modified:
 categories: Git, Github, VCS
 excerpt: So moving on, there are bunch of tutorials out there on using Git but many are quite convoluted with stuff you don't need right away.
 tags: [git, github, version control, CLi]
 image:
-  feature: 
+  feature: git-header.jpg
   teaser: githubLogo.png
   thumb: githubLogo.png
 ads: false
 date: 2015-10-30T13:43:58-07:00
 ---
 
-So "Git", is a version control system for software engineering. It was designed by Linus Tovalds, the or the 'Linux' guy. I'll explain it in a couple different in terms of problems it helps to solve:
+So "Git", is a version control system for software engineering. It was designed by Linus Tovalds, the 'Linux' guy. I'll explain it in terms of some problems it aims to solve (I'll try to keep this as layman as possible):
 
 ####1. Version Control:
-Say that you get you project to a working state and you want to save it and use it now, before you break it again. Also, you still have some features to add but again, you don't want to risk breaking your already working code. Maybe one way you'd account for this is to just create a bunch of local copies of your working code on your hard drive or a few different places. So when you break your code, working on that new feature or refactoring, you can just go back to one of 50 copies of your working. If the new feature works and that ends up being version 1.2, recurse!
+Say that you get your project to a working state and you want to save it and use it now before you break it again. You still have some features to add but again, you don't want to risk breaking your already working code. Maybe one way you'd account for this is to just create a bunch of local copies of your working code on your hard drive or a few different places. So when you break your code building that new feature or refactoring, you can just go back to one of 50 copies of your working code. If the new feature works and that ends up being version 1.x, recurse!
 
 ####2. Working in teams:
-Think about #1. It'd suck pretty bad if every time you want to add or change a feature of your team's project, everyone one had to carry around a copy of the working project on a flash drive. Then, when you end up having to **copy and paste** your code into the current version -because of course, this is all supposed to happen asychronously - they ended up changing stuff that they didn't say they were going to touch but ended up having to do so in order to get their feature working. Also, imagine that everyone has to document, **every single change to every single file** and you'd have to possibly review each of those changes before you can even get to making your own, so that you don't end up with conflicting code. We're not gonna get into package management or scaffolding, but let's just agree that with projects this day in age, there's so many tools out there that we don't know absolutley **everything** that is happening, especially in development. Long story short, this is a **shitty** workflow (sort of).
+Think about #1. It'd suck pretty bad if every time you want to add or change a feature of your team's project, everyone one had to carry around a copy of the working project on a flash drive. Then, when you end up having to **copy and paste** your code into the current version - because of course, this is all supposed to happen asychronously - they ended up changing stuff that they didn't say they were going to touch but needed to do so in order to get *their* feature working. Also, imagine that everyone has to document, *every single change to every single file* and you'd have to possibly review each of those changes before you can even get to making your own, so that you don't end up with conflicting code. We're not gonna get into package management or scaffolding, but let's just agree that with projects this day in age, there are so many tools we use and we don't know absolutley **everything** that is happening, especially in development. Long story short, this is a very difficult workflow (sort of).
 
 ####TL:DR:
-Basically, Git allows you do all the stuff above in a more automated manner. So instead of worrying about the mutiple copies, the documentation of changes...worry about your team's Git workflow, which mostly includes all this stuff. Alright, if I've made this concept any more confusing you'll get when you've got a few projects under your belt.
+Basically, Git allows you do all the stuff above in a more automated manner. So instead of worrying about the mutiple copies, the documentation of changes...worry about your team's Git workflow, which mostly includes all this stuff. Alright, if I've made this concept any more confusing you'll get it when you've got some projects under your belt.
 
-So moving on, there are bunch of tutorials out there on using Git but many are quite convoluted with stuff you don't need right away. While you'll eventually understand it if you continue to work through it I think they could do a much better job at stripping down to basics first. This is going to be a series of posts tyring to hash out basics that will help make the more complex stuff easier to handle as your workflow needs it. 
+So moving on, there are bunch of great tutorials out there on using Git but many are filled with stuff you don't need right away. While you'll eventually understand it if you continue to work through it I think they could do a much better job at stripping down to basics first. This is going to be a series of posts tyring to hash out basics that will help make the more complex stuff easier to handle as your workflow needs it. 
 
 **The first thing is that you'll learn this stuff much easier if you actually apply it to a workflow. Also, we're going to assume that you already have a few things already setup:**
 
 - We're going to apply this to Github's version control service. So you should have a Github account (it's free)
-- We're going to be using and **sh** or "shell" CLi so you should have **bash** (packaged with OSX) or **zsh**... installed
+- We're going to be using an **sh** or "shell" CLi so you should be able to navigate to your *terminal* in OSX (download *Git Bash* for Windows).
 - Next you need to have some basic command line interface (CLi) knowledge, specifically `cd` (change directory) and `ls` (list directory contents)
-- You need know the different uses of `cd` in terms of navigating and creating directories your system's directories
+- You need know the different uses of `cd` in terms of navigating and creating directories your system's directories (the directory structure is different for PC's and Mac's, I'm going to use)
 
-**I've not tried it out but I believe codecademy.com has a tutorial on the CLi**
+*I've not tried it out but I believe codecademy.com has a tutorial on the CLi*
 
 
 ####A few more things to note:
@@ -41,7 +41,8 @@ So moving on, there are bunch of tutorials out there on using Git but many are q
 - I'm not yet going to explain `branch`, `checkout`, `pull`, `--rebase`, `diff`, `hist`...those will come in the future
 - This all, will be demostrated in a workflow that help to understand the commands. But within any organization, project, team... your Git workflow will differ
 
-**NOTE: To do some of this stuff you may have to use the code editor Vim so I'm going to write the instruction below and you will have to refer to them if there is a step where I tell you to do so.**
+####Your editor and commit messages:
+*NOTE: To do some of this stuff (`$ git commit`) You will be taken to a code editor (don't do the `-m` thing). By default, Vim (a VI editor) or Nano will be your editor. I will discuss Vim usage  since Nano has pretty clear instructions. I so I'm going to write the instructions for Vim below and you will have to refer to them if there is a step where I tell you to do so.*
 
 ####Using Vim (be very careful here):
 Note: Look at the status bar at the bottom to see what mode you're in

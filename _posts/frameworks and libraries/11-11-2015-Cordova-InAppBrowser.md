@@ -10,8 +10,10 @@ image:
   teaser: 
   thumb: 
 ads: false
-date: 2015-10-02T13:43:58-07:00
+date: 2015-11-02T13:43:58-07:00
 ---
+
+Update: The beta version of Ionic2/Agular2 will soon be released. ngCordova plugins don't work (or will require some clever hacking) with Ionic2. If you plan to migrate, you should understand this beforehand.
 
 This post is specifically about my usage of the Cordova, InAppBrowser plugin. I did a considerable amount of searching to find answers to the problems I had and if I can help just one person get down to the root of their problem faster I'm more than happy with the time spent on this.
 

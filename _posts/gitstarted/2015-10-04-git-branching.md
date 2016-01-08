@@ -6,9 +6,9 @@ categories: Git, Github, VCS
 excerpt: Branching is one of the most amazing tools you have with git. It's essentially, version control inside of version control.
 tags: [git, github, version control, CLi]
 image:
-  feature: 
+  feature: git-beyond6.jpg
   teaser: 
-  thumb: githubLogo.png
+  thumb: 
 ads: false
 date: 2015-10-31T13:43:58-07:00
 ---
@@ -16,9 +16,11 @@ date: 2015-10-31T13:43:58-07:00
 
 Branching is one of the most amazing tools you have with git. It's essentially, version control inside of version control. What does that mean? Let's say that all (the important stuff at least) of your code is working properly, and there is a feature that you really want to implememnt (if you can get it working before shipping) but you're not sure that it will work. 
 
-You're worried that playing with working code may mess up the whole project. You begin to make local copies of the repo so you don't risk breaking your working code, but now it's not tracked by git. Let's say the feature you decided to implement works and you want to set the new version to include the updates you just made. Now you have to go back and try to track all the changes you made, copying and pasting all that back into the master repo. 
+You're worried that messing around with working code may mess up the whole project. You begin to make local copies of the repo so you don't risk breaking your working code, but now it's not tracked by git. Let's say the feature you decided to implement works and you want to set the new version to include the updates you just made. Now you have to go back and try to track all the changes you made, copying and pasting all that back into the master repo. 
 
-In that process you'll likely end up breaking your code. Luckily, you created a bunch of the local, working, copies but you still face the same copy and paste dilemna. The solutions to this is branching. Branching allows you to create all those local copies (and push them to your git repo as a different branch) and then merge them with your master branch when you have them working. If you don't get them working you can either just leave the branch for later work or delete it. The code on your master branch still works. You only have to be upset about spending time on a scrapped feature and without the worry of broken code.
+In that process you'll likely end up breaking your code. Luckily, you created a bunch of the local, working, copies but you still face the same copy and paste dilemna. The solutions to this is branching. Branching allows you to create all those local copies (and push them to your git repo as a different branch) and then merge them with your master branch when you have them working. If you don't get them working you can either just leave the branch for later work or delete it. The code on your master branch still works. You only have to be upset about spending time on a scrapped feature and without the worry of broken code. 
+
+There are also some very specific work
 
 If you need to brush up on your Git basics see my previous post at: [Git Started With Git](http://shinobi881.github.io/git,/github,/vcs/git-it-started/)
 

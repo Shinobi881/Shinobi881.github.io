@@ -6,7 +6,7 @@ categories: Libraries and Frameworks
 excerpt:
 tags: [jquery, angularjs, reactjs, backbonejs, angular, react, backbone, libraries, frameworks, javascript]
 image:
-  feature:
+  feature: JQuery_logo1.png
   teaser: 
   thumb: 
 ads: false
