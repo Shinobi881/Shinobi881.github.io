@@ -12,7 +12,8 @@ owner:
   name:           Muhsin Abdul-Musawwir
   avatar:         moose.png
   bio:            "Software Engineer, living, loving life"
-  resume:         muhsin_k.pdf
+  about:          shinobi881.github.io/about-me/
+  resume:         goo.gl/f2d9Up
   email:          muhsin81@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
@@ -27,10 +28,10 @@ owner:
   google_plus:    
 
 # Background image to be tiled on all pages
-background: 
+background: sf2.jpg
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics: UA-77122136-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
